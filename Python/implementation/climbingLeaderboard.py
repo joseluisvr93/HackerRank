@@ -2,6 +2,7 @@ def climbingLeaderboard(ranked, player):
     # Write your code here
     ranks = []
     ranked = sorted(list(set(ranked)),reverse=True)
+    print(ranked)
     for i in range(len(player)):
         ranked.append(player[i])
         ranked = sorted(list(set(ranked)),reverse=True)
@@ -13,6 +14,5 @@ def climbingLeaderboard(ranked, player):
 
 ranked = list(map(int, input().rstrip().split()))
 player = list(map(int, input().rstrip().split()))
-
 result = climbingLeaderboard(ranked, player)
-
+print(result)
